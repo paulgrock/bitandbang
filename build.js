@@ -8,25 +8,25 @@ const path = require('path')
 
 // Define options for Boxen
 const options = {
-  padding: 1,
-  margin: 1,
+  padding: 5,
+  margin: 5,
   borderStyle: 'round'
 }
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('               Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  opensource: chalk.white('Node.js Community Committee ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('bitandbang'),
+  name: chalk.white('               Paul Grock'),
+  handle: chalk.white('@paulgrock'),
+  work: chalk.white('Senior Software Engineer at AutoFi'),
+  community: chalk.white('Organizer SFNode'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('paulgrock'),
+  npm: chalk.gray('https://npmjs.com/') + chalk.red('~paulgrock'),
+  github: chalk.gray('https://github.com/') + chalk.green('paulgrock'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('paulgrock'),
+  web: chalk.cyan('https://paulgrock.com'),
+  npx: chalk.red('npx') + ' ' + chalk.white('paulgrock'),
   labelWork: chalk.white.bold('       Work:'),
-  labelOpenSource: chalk.white.bold('Open Source:'),
+  labelCommunity: chalk.white.bold('  Community:'),
   labelTwitter: chalk.white.bold('    Twitter:'),
   labelnpm: chalk.white.bold('        npm:'),
   labelGitHub: chalk.white.bold('     GitHub:'),
@@ -37,9 +37,9 @@ const data = {
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle}`
+const heading = `${data.name} | ${data.handle}`
 const working = `${data.labelWork}  ${data.work}`
-const opensourcing = `${data.labelOpenSource}  ${data.opensource}`
+const community = `${data.labelCommunity}  ${data.community}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
 const npming = `${data.labelnpm}  ${data.npm}`
 const githubing = `${data.labelGitHub}  ${data.github}`
@@ -51,7 +51,7 @@ const carding = `${data.labelCard}  ${data.npx}`
 const output = heading + // data.name + data.handle
                newline + newline + // Add one whole blank line
                working + newline + // data.labelWork + data.work
-               opensourcing + newline + newline + // data.labelOpenSource + data.opensource
+               community + newline + newline + // data.labelCommunity + data.opensource
                twittering + newline + // data.labelTwitter + data.twitter
                npming + newline + // data.labelnpm + data.npm
                githubing + newline + // data.labelGitHub + data.github
